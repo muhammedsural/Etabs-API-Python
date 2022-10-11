@@ -1,3 +1,4 @@
+from unicodedata import name
 import comtypes.client;
 import os;
 import sys;
@@ -163,3 +164,7 @@ def get_all_points(SapModel,inc_restraint=True):
         else:
             points.append([ptNames[i],ptX[i],ptY[i],ptZ[i]]);
     return points;
+
+
+SapModel,EtabsObject = connect_to_etabs_2019()
+print(SapModel,EtabsObject)
